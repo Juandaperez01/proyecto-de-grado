@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Gestión de Inventario - San José del Guaviare</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Gestión de Inventario - San José del Guaviare</h1>
+        <nav>
+            <ul>
+                <li><a href="#inicio" onclick="mostrarInicio()">Inicio</a></li>
+                <li><a href="#inventario" onclick="mostrarInventario()">Inventario</a></li>
+                <li><a href="#compras" onclick="mostrarCompras()">Registro de Compras</a></li>
+                <li><a href="#ventas" onclick="mostrarVentas()">Registro de Ventas</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="inicio">
+            <h2>Bienvenido a la plataforma de gestión de inventario</h2>
+            <p>El proyecto consiste en una aplicación web que permite optimizar y gestionar el inventario y el registro de compras y ventas de tiendas, locales y negocios ubicados en el municipio de San José del Guaviare. Con el fin de aumentar la diversificación en productos, materias primas, materias secundarias, artesanales (originarias de la región), entre otras...</p>
+            <p><strong>Problema a solucionar:</strong> Las tiendas locales en San José del Guaviare carecen de sistemas eficientes para gestionar inventarios y registrar transacciones comerciales. Esto conlleva a errores, ineficiencias y obstáculos en la toma de decisiones. La falta de herramientas tecnológicas adecuadas limita su crecimiento y competitividad en un mercado cambiante. Es esencial desarrollar una solución que agilice estos procesos y mejore la eficiencia operativa de las tiendas locales.</p>
+            <p><strong>Justificación:</strong> La página web propuesta optimizará la gestión de inventario y el registro de compras y ventas en tiendas locales de San José del Guaviare, aumentando considerablemente la eficiencia y eficacia en las capacidades y calidades entre las tiendas, beneficiando tanto a los comerciantes como a la comunidad local dentro de un óptimo desarrollo comercial. </p>
+            <p><strong>Programado por:</strong>Creado por el grupo 201014_86 de la UNAD compuesto por: Juan David Perez Diaz, Michael Stuar Cano Hernández, José Reinaldo Parra Morales, Jhoy Santiago Moreno Marroquin.</p>
+        </section>
+
+        <section id="inventario" style="display: none;">
+            <h2>Inventario</h2>
+            <ul id="listaInventario">
+                <h3>Productos de limpieza:</h3>
+                <ul>
+                    <li onclick="marcarComprado(this)">Detergente líquido</li>
+                    <li onclick="marcarComprado(this)">Limpiadores multiusos</li>
+                    <li onclick="marcarComprado(this)">Desinfectante</li>
+                    <li onclick="marcarComprado(this)">Lavavajillas</li>
+                    <li onclick="marcarComprado(this)">Limpiadores para pisos</li>
+                </ul>
+
+                <!-- Alimentos enlatados -->
+                <h3>Alimentos enlatados:</h3>
+                <ul>
+                    <li onclick="marcarComprado(this)">Atún en lata</li>
+                    <li onclick="marcarComprado(this)">Sardinas en lata</li>
+                    <li onclick="marcarComprado(this)">Maíz enlatado</li>
+                    <li onclick="marcarComprado(this)">Chícharos enlatados</li>
+                    <li onclick="marcarComprado(this)">Frijoles en lata</li>
+                </ul>
+
+                <!-- Productos lácteos -->
+                <h3>Productos lácteos:</h3>
+                <ul>
+                    <li onclick="marcarComprado(this)">Leche en envase</li>
+                    <li onclick="marcarComprado(this)">Queso fresco</li>
+                    <li onclick="marcarComprado(this)">Yogur natural o de sabores</li>
+                </ul>
+
+                <!-- Granos y cereales -->
+                <h3>Granos y cereales:</h3>
+                <ul>
+                    <li onclick="marcarComprado(this)">Arroz</li>
+                    <li onclick="marcarComprado(this)">Fideos o pasta</li>
+                    <li onclick="marcarComprado(this)">Harina de trigo</li>
+                    <li onclick="marcarComprado(this)">Avena en hojuelas</li>
+                </ul>
+
+                <!-- Bebidas -->
+                <h3>Bebidas:</h3>
+                <ul>
+                    <li onclick="marcarComprado(this)">Agua embotellada</li>
+                    <li onclick="marcarComprado(this)">Refrescos en lata</li>
+                    <li onclick="marcarComprado(this)">Jugos en envases individuales</li>
+                </ul>
+
+                <!-- Artículos de higiene personal -->
+                <h3>Artículos de higiene personal:</h3>
+                <ul>
+                    <li onclick="marcarComprado(this)">Papel higiénico</li>
+                    <li onclick="marcarComprado(this)">Jabón de baño</li>
+                    <li onclick="marcarComprado(this)">Champú</li>
+                    <li onclick="marcarComprado(this)">Cepillos de dientes</li>
+                    <li onclick="marcarComprado(this)">Pasta dental</li>
+                </ul>
+
+                <!-- Conservas y aderezos -->
+                <h3>Conservas y aderezos:</h3>
+                <ul>
+                    <li onclick="marcarComprado(this)">Salsas de tomate</li>
+                    <li onclick="marcarComprado(this)">Mayonesa</li>
+                    <li onclick="marcarComprado(this)">Mostaza</li>
+                    <li onclick="marcarComprado(this)">Vinagre</li>
+                </ul>
+
+                <!-- Productos de panadería -->
+                <h3>Productos de panadería:</h3>
+                <ul>
+                    <li onclick="marcarComprado(this)">Pan fresco</li>
+                    <li onclick="marcarComprado(this)">Pan tostado</li>
+                    <li onclick="marcarComprado(this)">Galletas</li>
+                </ul>
+
+                <!-- Condimentos y especias -->
+                <h3>Condimentos y especias:</h3>
+                <ul>
+                    <li onclick="marcarComprado(this)">Sal</li>
+                    <li onclick="marcarComprado(this)">Pimienta</li>
+                    <li onclick="marcarComprado(this)">Ajo en polvo</li>
+                    <li onclick="marcarComprado(this)">Comino</li>
+                    <li onclick="marcarComprado(this)">Orégano</li>
+                </ul>
+
+                <!-- Artículos de cuidado personal -->
+                <h3>Artículos de cuidado personal:</h3>
+                <ul>
+                    <li onclick="marcarComprado(this)">Toallas higiénicas</li>
+                    <li onclick="marcarComprado(this)">Pañales desechables</li>
+                    <li onclick="marcarComprado(this)">Papel de cocina</li>
+                    <li onclick="marcarComprado(this)">jabon intimo</li>
+                </ul>
+            </ul>
+        </section>
+
+        <section id="compras" style="display: none;">
+            <h2>Registro de Compras</h2>
+            <p id="infoCompras"></p>
+            <ul id="listaCompras"></ul>
+        </section>
+
+        <section id="ventas" style="display: none;">
+            <h2>Registro de Ventas</h2>
+            <p id="infoVentas"></p>
+            <ul id="listaVentas"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Gestión de Inventario - San José del Guaviare</p>
+    </footer>
+
+    <script>
+        // Objeto que simula el inventario con cantidades iniciales
+        var inventario = {
+            "Detergente líquido": 50,
+            "Limpiadores multiusos": 30,
+            // Agrega el resto de los productos de la lista
+            // ...
+        };
+
+        function mostrarInicio() {
+            ocultarSecciones();
+            document.getElementById("inicio").style.display = "block";
+        }
+
+        function mostrarInventario() {
+            ocultarSecciones();
+            document.getElementById("inventario").style.display = "block";
+        }
+
+        function mostrarCompras() {
+            ocultarSecciones();
+            document.getElementById("compras").style.display = "block";
+        }
+
+        function mostrarVentas() {
+            ocultarSecciones();
+            document.getElementById("ventas").style.display = "block";
+        }
+
+        function ocultarSecciones() {
+            var secciones = document.getElementsByTagName("section");
+            for (var i = 0; i < secciones.length; i++) {
+                secciones[i].style.display = "none";
+            }
+        }
+
+        function marcarComprado(element) {
+            var listItem = element;
+            listItem.style.textDecoration = "line-through";
+
+            var listaCompras = document.getElementById("listaCompras");
+            var cantidad = prompt("Ingrese la cantidad de productos comprados:", 1);
+
+            if (cantidad !== null && cantidad !== "") {
+                var newItem = document.createElement("li");
+                newItem.innerText = cantidad + "- " + listItem.innerText;
+                listaCompras.appendChild(newItem);
+
+                actualizarInfoCompras(cantidad, listItem.innerText);
+                agregarVenta(cantidad, listItem.innerText);
+            }
+        }
+
+        function actualizarInfoCompras(cantidad, producto) {
+            var infoCompras = document.getElementById("infoCompras");
+            infoCompras.innerText = "Se han comprado " + cantidad + " unidades de " + producto + ".";
+        }
+
+        function agregarVenta(cantidad, producto) {
+            var listaVentas = document.getElementById("listaVentas");
+            var newItem = document.createElement("li");
+            newItem.innerText = cantidad + "- " + producto;
+            listaVentas.appendChild(newItem);
+
+            actualizarInfoVentas(cantidad, producto);
+        }
+
+        function actualizarInfoVentas(cantidad, producto) {
+            var infoVentas = document.getElementById("infoVentas");
+            infoVentas.innerText = "Se han vendido " + cantidad + " unidades de " + producto + ".";
+        }
+
+        // Función para inicializar la lista de inventario en la sección correspondiente
+        function inicializarInventario() {
+            var seccionInventario = document.getElementById("inventario");
+
+            var listaInventario = document.createElement("ul");
+            for (var producto in inventario) {
+                var listItem = document.createElement("li");
+                listItem.innerText = `${producto}: ${inventario[producto]} unidades`;
+                listaInventario.appendChild(listItem);
+            }
+
+            seccionInventario.appendChild(listaInventario);
+        }
+        function marcarComprado(element) {
+        var listItem = element;
+        listItem.style.textDecoration = "line-through";
+
+        var cantidadComprada = prompt("Ingrese la cantidad de productos comprados:", 1);
+        var cantidadVendida = prompt("Ingrese la cantidad de productos vendidos:", 1);
+
+        if (cantidadComprada !== null && cantidadComprada !== "" && cantidadVendida !== null && cantidadVendida !== "") {
+            // Registro de Compras
+            var listaCompras = document.getElementById("listaCompras");
+            var newItemCompra = document.createElement("li");
+            newItemCompra.innerText = cantidadComprada + "- " + listItem.innerText;
+            listaCompras.appendChild(newItemCompra);
+
+            actualizarInfoCompras(cantidadComprada, listItem.innerText);
+
+            // Registro de Ventas
+            var listaVentas = document.getElementById("listaVentas");
+            var newItemVenta = document.createElement("li");
+            newItemVenta.innerText = cantidadVendida + "- " + listItem.innerText;
+            listaVentas.appendChild(newItemVenta);
+
+            actualizarInfoVentas(cantidadVendida, listItem.innerText);
+        }
+    }
+
+        // Llamada para inicializar el inventario al cargar la página
+        inicializarInventario();
+    </script>
+</body>
+</html>
